@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>教材列表</title>
+    <link href="https://cdn.bootcss.com/twitter-bootstrap/4.3.1/css/bootstrap.css" rel="stylesheet">
+</head>
+<body>
+<body background="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1577968591833&di=818da2a2719bbef0931fe0b4f5371ec4&imgtype=jpg&src=http%3A%2F%2Fimg4.imgtn.bdimg.com%2Fit%2Fu%3D128920274%2C2119072035%26fm%3D214%26gp%3D0.jpg" style=" background-repeat:no-repeat ;background-size:100% 100%;
+background-attachmnt: fixed;">
+<a href="/index/"><button class="btn btn-primary">首页</button></a>
+<h4>教材列表</h4>
+<hr>
+<ul>
+{% for jc in Jclist %}
+<li>{{ jc.jc_name }}</li>
+    <li>教材号：{{ jc.jc_id }}</li>
+    <li>单价：{{ jc.danjia }}</li>
+{% endfor %}
+</ul>
+<h4>订购列表</h4>
+<hr>
+<ul>
+{% for dg in Dglist %}
+    <li>教材号：{{ dg.jc_id }}</li>
+<li>订购量：{{ dg.dg_dgliang }}</li>
+{% endfor %}
+</ul>
+<h4>学校列表</h4>
+<hr>
+<ul>
+{% for xx in Xxlist %}
+<li>订购学校：{{ xx.xx_name }}</li>
+{% endfor %}
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+</ul>
+</body>
+</html>

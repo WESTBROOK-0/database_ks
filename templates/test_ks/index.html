@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>出版社列表</title>
+</head>
+<body>
+<body background="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1577968403949&di=17080a8d7be9be4ba419723a1ec0190a&imgtype=0&src=http%3A%2F%2Fimg.jk51.com%2Fimg_jk51%2F310806952.jpeg" style=" background-repeat:no-repeat ;background-size:100% 100%;
+background-attachmnt: fixed;">
+<h1>出版社列表</h1>
+<ul>
+{% for cbs in cbslist %}
+    <li>出版社号：{{ cbs.cbs_id }}</li>
+    <li><a href="/{{ cbs.cbs_id }}/">出版社：{{ cbs.cbs_name }}</a> </li>
+    <li>库存量：{{ cbs.cbs_kucun }}</li>
+{% endfor %}
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+</ul>
+</body>
+</html>
